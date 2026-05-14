@@ -1,6 +1,6 @@
 name: Simple Owasp Zap Scan (Logs Only)
 on:
-workflow dispatch:
+workflow_dispatch:
 push:
   branches: 
   - master
