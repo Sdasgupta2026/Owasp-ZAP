@@ -7,9 +7,12 @@ on:
       - main
 permissions: 
   contents: read
+  issues: write
 jobs:
   zap:
     runs-on: ubuntu-latest
+    name: Run DAST Scan
+    env: FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout repsitory
         uses: actions/checkout@v4
@@ -17,5 +20,5 @@ jobs:
       - name: Run Owasp Zap Baseline Scan
         uses: zaproxy/action-baseline@v0.14.0
         with:
-          target: 'https://example.com'
-          cmd_options: '-a'
+          target: 'https://juice-shop.herokuapp.com'
+          cmd_options: '-I'
