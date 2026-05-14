@@ -12,7 +12,6 @@ jobs:
   zap:
     runs-on: ubuntu-latest
     name: Run DAST Scan
-    env: FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout repsitory
         uses: actions/checkout@v4
