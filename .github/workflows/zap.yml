@@ -17,5 +17,5 @@ jobs:
       - name: Run Owasp Zap Baseline Scan
         uses: zaproxy/action-baseline@v0.14.0
         with:
-          target: 'https://juice-shop.herokuapp.com'
+          target: 'https://example.com'
           cmd_options: '-a'
